@@ -1,0 +1,45 @@
+<html>
+<head>
+
+</head>
+
+<body>
+<h3>This is my start page from a template</h3>
+
+<p>This is dynamic: {{message|upper}}</p>
+<p>Array is {{ arr }}</p>
+<p>Array at 0  is {{ arr[0] }}</p>
+<p>Dictionary is {{ mydictionary }}</p>
+<p>Dictionary at data is {{ mydictionary.data }}</p>
+<p>Array of Dictionary Obj {{ arrofobj }}</p>
+<p>Array of Dictionary Obj at 0 {{ arrofobj[0] }}
+<p>Array of Dictionary Obj at 0 data {{ arrofobj[0].data }}
+{% if (message == "something") %}
+   <p> It is equal</p>
+{% else %}
+   <p>It is not equal</p>
+{% endif %}
+
+<ul>
+{% for item in arrofobj%}
+<li>
+{{item['data']}}  
+</li>
+{%  endfor %}
+</ul>
+
+<table border = 1>
+    {% for item in arrofobj%}
+    <tr>
+        <td>{{item.index}}</td>
+        <td>{{item.data}}</td>
+    </tr>
+    {%  endfor %}
+
+    
+</table>
+</p>
+
+</body>
+
+</html>
