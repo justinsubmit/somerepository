@@ -2,7 +2,7 @@ from flask import Flask,jsonify
 from mysql.connector import pooling
 # from config.Settings import Settings
 from config.Settings2 import Settings2
-from config.Settings import Settings1
+# from config.Settings import Settings1
 
 
 import os
