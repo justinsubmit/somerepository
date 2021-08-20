@@ -144,33 +144,33 @@ def login():
 
 
 
-@app.route('/')
-def validate():
-    data = request.args.get('data')
-    pattern = "[a-zA-Z0-9]+@[a-zA-Z-]+\.[a-zA-Z]+"
-    exp = re.compile(pattern)
-    result = "not valid"
-    if (exp.match(data)):
-        print("valid email")
-        result = "valid email"
-    else:
-        print("invalid email")
-        result = "invalid email"
+# @app.route('/')
+# def validate():
+#     data = request.args.get('data')
+#     pattern = "[a-zA-Z0-9]+@[a-zA-Z-]+\.[a-zA-Z]+"
+#     exp = re.compile(pattern)
+#     result = "not valid"
+#     if (exp.match(data)):
+#         print("valid email")
+#         result = "valid email"
+#     else:
+#         print("invalid email")
+#         result = "invalid email"
 
-    # #password had to be converted to byte array
-    # password = b"12345678"
-    # # encode()
-    # hashed = bcrypt.hashpw(password, bcrypt.gensalt())
-    # print("hadhed",hashed)
-    # print("salt",bcrypt.gensalt())
-    # result = "didnt match"
-    # if bcrypt.checkpw(password,hashed):
-    #     print("it matches")
-    #     result = "it matched"
-    # else:
-    #     print("didnt match")  
-    #     result = "it didnt match"
-    return result
+#     # #password had to be converted to byte array
+#     # password = b"12345678"
+#     # # encode()
+#     # hashed = bcrypt.hashpw(password, bcrypt.gensalt())
+#     # print("hadhed",hashed)
+#     # print("salt",bcrypt.gensalt())
+#     # result = "didnt match"
+#     # if bcrypt.checkpw(password,hashed):
+#     #     print("it matches")
+#     #     result = "it matched"
+#     # else:
+#     #     print("didnt match")  
+#     #     result = "it didnt match"
+#     return result
 
 @app.route('/users/<int:userid>')
 def getUser(userid):
