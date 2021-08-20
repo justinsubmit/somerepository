@@ -13,7 +13,7 @@ app = Flask(__name__)
 @app.route('/')
 def validate():
    
-    return "hello world"
+    return "hello world Friday 10:22"
 
 
 @app.route('/users2')
